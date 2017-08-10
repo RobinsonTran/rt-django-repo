@@ -3,13 +3,9 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
-# Create your views here.
-
-# :filename: polls/views.py
-
 from django.http import HttpResponse
 
+# Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, World. You're at the polls index.")
-
+    return HttpResponse("Hello, world. You're at the polls index.")
