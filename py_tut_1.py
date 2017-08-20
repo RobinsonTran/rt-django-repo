@@ -368,14 +368,71 @@ def lbreak():
 
 # -------------------Dictionary-----------------------
 
-tel = {'jack': 4098, 'sape': 4139}
-tel['guido'] = 4127
-print tel
+# tel = {'jack': 4098, 'sape': 4139}
+# tel['guido'] = 4127
+# print tel
+
+# lbreak()
+
+# print tel['jack']
+
+# lbreak()
+
+# del tel ['sape']
+# tel ['irv'] = 4127
+# print tel
+
+# lbreak()
+
+# print list(tel.keys())
+
+# lbreak()
+
+# print sorted(tel.keys())
+
+# lbreak()
+
+# print 'guido' in tel
+# print 'jack' not in tel
+
+# lbreak()
+
+# print dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+
+# lbreak()
+
+# print {x: x**2 for x in (2, 4, 6)}
+
+# lbreak()
+
+# print dict(sape=4139, guido=4127, jack=4098)
+
+lbreak()
+#-------------------Looping Techniques---------------------------
+
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+for k, v in knights.items():
+    print(k, v)
 
 lbreak()
 
-print tel['jack']
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
 
 lbreak()
 
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+    print('What is your {0}?  It is {1}.'.format(q, a))
 
+lbreak()
+
+for i in reversed(range(1, 10, 2)):
+    print(i)
+
+lbreak()
+
+basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+for f in sorted(set(basket)):
+    print(f)
