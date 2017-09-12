@@ -1,8 +1,8 @@
 # for line breaks and partitions; organization purposes
 def lbreak():
-    print ''
-    print '-' * 45
-    print ''
+    print('')
+    print('-' * 45)
+    print('')
 
 #  def fib2(n):
 #      result=[]
@@ -407,60 +407,132 @@ def lbreak():
 
 # print dict(sape=4139, guido=4127, jack=4098)
 
-lbreak()
+# lbreak()
 #-------------------Looping Techniques---------------------------
 
-knights = {'gallahad': 'the pure', 'robin': 'the brave'}
-for k, v in knights.items():
-    print(k, v)
+# knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+# for k, v in knights.items():
+#     print(k, v)
 
-lbreak()
+# lbreak()
 
-for i, v in enumerate(['tic', 'tac', 'toe']):
-    print(i, v)
+# for i, v in enumerate(['tic', 'tac', 'toe']):
+#     print(i, v)
 
-lbreak()
+# lbreak()
 
-questions = ['name', 'quest', 'favorite color']
-answers = ['lancelot', 'the holy grail', 'blue']
-for q, a in zip(questions, answers):
-    print('What is your {0}?  It is {1}.'.format(q, a))
+# questions = ['name', 'quest', 'favorite color']
+# answers = ['lancelot', 'the holy grail', 'blue']
+# for q, a in zip(questions, answers):
+#     print('What is your {0}?  It is {1}.'.format(q, a))
 
-lbreak()
+# lbreak()
 
-for i in reversed(range(1, 10, 2)):
-    print(i)
+# for i in reversed(range(1, 10, 2)):
+#     print(i)
 
-lbreak()
+# lbreak()
 
-basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
-for f in sorted(set(basket)):
-    print(f)
+# basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+# for f in sorted(set(basket)):
+#     print(f)
 
-lbreak()
+# lbreak()
 
-import math
-raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('Nan'), 47.8]
-filtered_data = []
-for value in raw_data:
-    if not math.isnan(value):
-        filtered_data.append(value)
-print filtered_data
+# import math
+# raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('Nan'), 47.8]
+# filtered_data = []
+# for value in raw_data:
+#     if not math.isnan(value):
+#         filtered_data.append(value)
+# print filtered_data
 
-lbreak()
+# lbreak()
 
 #--------------------------More on Conditions----------------------------
 
-string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
-non_null = string1 or string2 or string3
-print non_null
+# string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
+# non_null = string1 or string2 or string3
+# print non_null
 
-lbreak()
+# lbreak()
 
-print (1, 2, 3) < (1, 2, 4)
-print [1, 2, 3] < [1, 2, 4]
-print 'ABC' < 'C' < 'Pascal' < 'Python'
+# print (1, 2, 3) < (1, 2, 4)
+# print [1, 2, 3] < [1, 2, 4]
+# print 'ABC' < 'C' < 'Pascal' < 'Python'
 
-lbreak()
+# lbreak()
+
+#-------------------------Errors & Exceprions-------------------------------
+
+# import sys
+
+# try:
+#     f = open('myfile.txt')
+#     s = f.readline()
+#     i = int(s.strip())
+# except OSError as err:
+#     print("OS error: {0}".format(err))
+# except ValueError:
+#     print("Could not convert data to an integer.")
+# except:
+#     print("Unexpected error:", sys.exc_info()[0])
+#     raise
+
+# lbreak()
+
+# for arg in sys.argv[1:]:
+#     try:
+#         f = open(arg, 'r')
+#     except OSError:
+#         print('cannot open', arg)
+#     else:
+#         print(arg, 'has', len(f.readlines()), 'lines')
+#         f.close()
+
+
+# class Error(Exception):
+#     """Base class for exceptions in this module."""
+#     pass
+
+# class InputError(Error):
+#     """Exception raised for errors in the input.
+
+# Attributes:
+#     expression -- input expression in which the error occurred
+#     message -- explanationof the error
+#     """
+
+#     def __init__(self, expression, message):
+#         self.expression = expression
+#         self.message = message
+
+# class TransitionError(Error):
+#     """Raised when an operation attempts a state transition that's not allowed.
+
+#     Attributes:
+#         previous -- state at beginning of transition
+#         next -- attempted new state
+#         message -- explanation of why the specific transition is not allowed
+#     """
+
+#     def __init__(self, previous, next, message):
+#         self.previous = previous
+#         self.next = next
+#         self.message = message
+
+
+# lbreak()
+
+# # for line in open("myfile.txt"):
+# #     print(line, end="")
+
+# with open("myfile.txt") as f:
+#     for line in f:
+#         print(line, end="")
+
+#----------------------------Classes--------------------------------------
+
+
 
 
