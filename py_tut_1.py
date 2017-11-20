@@ -551,6 +551,32 @@ def scope_test():
     do_global()
     print("After global assignment:", spam)
 
+<<<<<<< HEAD
+def scope_test ():
+    def do_local():
+        spam = "local spam"
+
+    def do_nonlocal():
+        nonlocal spam
+        spam = "nonlocal spam"
+
+    def do_global():
+        global spam
+        spam = "global spam"
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
+
+scope_test()
+print("In global scope:", spam)
+
+scope_test()
+=======
 scope_test()
 print("In global scope:", spam)
 
@@ -574,8 +600,12 @@ while x.counter < 10:
     x.counter = x.counter * 2
 print(x.counter)
 del x.counter
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 6d65a2519ac4ebc7bd8f203ccbd4da2e819a54ae
+>>>>>>> 712933ed2e30b12346f5a04ae3f872d1eea2b467
