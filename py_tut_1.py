@@ -574,3 +574,8 @@ while x.counter < 10:
     x.counter = x.counter * 2
 print(x.counter)
 del x.counter
+
+
+
+
+
