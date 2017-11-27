@@ -600,4 +600,12 @@ while x.counter < 10:
     x.counter = x.counter * 2
 print(x.counter)
 del x.counter
+<<<<<<< HEAD
+
+
+
+
+
+=======
 >>>>>>> 6d65a2519ac4ebc7bd8f203ccbd4da2e819a54ae
+>>>>>>> 712933ed2e30b12346f5a04ae3f872d1eea2b467
