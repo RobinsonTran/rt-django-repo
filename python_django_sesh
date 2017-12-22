@@ -249,22 +249,23 @@ badd +48 django/django/contrib/humanize/templatetags/humanize.py
 badd +9 django/django/contrib/admin/widgets.py
 badd +59 mysite/mysite/settings.py
 badd +1 mysite/polls/templates/admin/base_site.html
-badd +55 django/docs/ref/class-based-views/base.txt
+badd +17 django/docs/ref/class-based-views/base.txt
 badd +1 django/docs/ref/class-based-views/flattened-index.txt
 badd +1 django/docs/ref/class-based-views/generic-date-based.txt
-badd +1 django/docs/ref/class-based-views/generic-display.txt
+badd +18 django/docs/ref/class-based-views/generic-display.txt
 badd +1 django/docs/ref/class-based-views/generic-editing.txt
-badd +1 django/docs/ref/class-based-views/index.txt
+badd +19 django/docs/ref/class-based-views/index.txt
 badd +138 ~/.vim/vim_runtime/my_configs.vim
 badd +3 fibo.py
 badd +9 lpthw/ex3.py
 badd +14 lpthw/ex4.py
 badd +18 lpthw/ex5.py
 badd +21 lpthw/ex6.py
-badd +1 lpthw/ex7.py
+badd +14 lpthw/ex7.py
+badd +0 lpthw/ex8.py
 argglobal
 silent! argdel *
-edit lpthw/ex7.py
+edit lpthw/ex8.py
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -278,7 +279,7 @@ exe 'vert 1resize ' . ((&columns * 31 + 106) / 213)
 exe 'vert 2resize ' . ((&columns * 181 + 106) / 213)
 argglobal
 enew
-file NERD_tree_3
+file NERD_tree_1
 let s:cpo_save=&cpo
 set cpo&vim
 nnoremap <buffer> <silent> <NL> :call nerdtree#ui_glue#invokeKeyMap("<C-j>")
@@ -546,7 +547,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!Pl#Statusline(0,1)
+setlocal statusline=%!Pl#Statusline(0,0)
 setlocal suffixesadd=.py
 setlocal noswapfile
 setlocal synmaxcol=3000
@@ -574,9 +575,148 @@ normal! zt
 1
 normal! 0
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 106) / 213)
 exe 'vert 2resize ' . ((&columns * 181 + 106) / 213)
+tabedit fibo.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=1 winheight=1 winminwidth=1 winwidth=1
+argglobal
+map <buffer> ,D ?def 
+map <buffer> ,C ?class 
+map <buffer> ,2 /def 
+map <buffer> ,1 /class 
+map <buffer> F :set foldmethod=indent
+inoremap <buffer> $f #--- a
+inoremap <buffer> $p print 
+inoremap <buffer> $i import 
+inoremap <buffer> $r return 
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=b:#,fb:-
+setlocal commentstring=#\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=youcompleteme#CompleteFunc
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'python'
+setlocal filetype=python
+endif
+setlocal fixendofline
+set foldcolumn=1
+setlocal foldcolumn=1
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*\\(from\\|import\\)
+setlocal includeexpr=substitute(v:fname,'\\.','/','g')
+setlocal indentexpr=GetPythonIndent(v:lnum)
+setlocal indentkeys=0{,0},:,!^F,o,O,e,<:>,=elif,=except
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=pydoc
+set linebreak
+setlocal linebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal nomacmeta
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=pythoncomplete#Complete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+set relativenumber
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal signcolumn=auto
+setlocal smartindent
+setlocal softtabstop=4
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%!Pl#Statusline(0,1)
+setlocal suffixesadd=.py
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'python'
+setlocal syntax=python
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tags=
+setlocal termkey=
+setlocal termsize=
+setlocal textwidth=500
+setlocal thesaurus=
+setlocal undofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 3 - ((2 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3
+normal! 0
 tabedit django/docs/ref/class-based-views/base.txt
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -835,7 +975,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 46 - ((45 * winheight(0) + 27) / 55)
+let s:l = 46 - ((41 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1369,7 +1509,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 19 - ((18 * winheight(0) + 27) / 55)
+let s:l = 19 - ((16 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1392,11 +1532,11 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
-exe '1resize ' . ((&lines * 33 + 29) / 59)
+exe '1resize ' . ((&lines * 30 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 106 + 106) / 213)
-exe '2resize ' . ((&lines * 33 + 29) / 59)
+exe '2resize ' . ((&lines * 30 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 106 + 106) / 213)
-exe '3resize ' . ((&lines * 21 + 29) / 59)
+exe '3resize ' . ((&lines * 24 + 29) / 59)
 argglobal
 map <buffer> ,D ?def 
 map <buffer> ,C ?class 
@@ -1525,7 +1665,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 131 - ((22 * winheight(0) + 16) / 33)
+let s:l = 131 - ((20 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1661,7 +1801,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 34 - ((29 * winheight(0) + 16) / 33)
+let s:l = 34 - ((26 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1797,18 +1937,18 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 31 - ((8 * winheight(0) + 10) / 21)
+let s:l = 31 - ((7 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 31
 normal! 017|
 wincmd w
-exe '1resize ' . ((&lines * 33 + 29) / 59)
+exe '1resize ' . ((&lines * 30 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 106 + 106) / 213)
-exe '2resize ' . ((&lines * 33 + 29) / 59)
+exe '2resize ' . ((&lines * 30 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 106 + 106) / 213)
-exe '3resize ' . ((&lines * 21 + 29) / 59)
+exe '3resize ' . ((&lines * 24 + 29) / 59)
 tabedit mysite/mysite/settings.py
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -2085,7 +2225,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 27 - ((24 * winheight(0) + 27) / 55)
+let s:l = 27 - ((22 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -2505,13 +2645,13 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 34 - ((8 * winheight(0) + 27) / 55)
+let s:l = 48 - ((46 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-34
+48
 normal! 0
-tabnext 1
+tabnext 2
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
